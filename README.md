@@ -2,3 +2,5 @@
 # angular v12.1.4
 # ng add @angular/material
 # npm install bootstrap-grid-only-css --save
+# import {MatSnackBarModule} from '@angular/material/snack-bar';
+
