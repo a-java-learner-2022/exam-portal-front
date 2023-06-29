@@ -20,8 +20,10 @@
         <mat-icon>register</mat-icon>
       </button>
     </a>
-<!-- displaying current logged in full name -->
-    <a *ngIf="isLoggedIn" class="mr20" >
+  <!-- displaying current logged in username -->
+    <a *ngIf="isLoggedIn" 
+        routerLink="/admin/profile"
+        class="mr20" >
       <button mat-icon-button class="example-icon mr20" aria-label="Example icon-button with share icon" >
         <mat-icon>{{loginService.getUser().username}}</mat-icon>
       </button>

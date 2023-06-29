@@ -13,7 +13,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <table class="profile-table">
+                        <table class="profile-table" *ngIf="user">
                             <tr>
                                 <td>Username</td>
                                 <td>{{user.username}}</td>

@@ -12,7 +12,20 @@ export class ProfileComponent implements OnInit {
   constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
+    //getting user details from local storage
     this.user =   this.loginService.getUser();
+
+    // calling server for data.
+    // this.loginService.getCurrentUser().subscribe(
+    //   (data)=>{
+    //     this.user = data;
+    //   },
+    //   (error)=>{
+    //     alert('error');
+    //   }
+    // );
   }
+
+
 
 }
