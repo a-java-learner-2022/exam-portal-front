@@ -1,0 +1,55 @@
+<div class="bootstrap-wrapper text-center">
+
+    <!-- logo -->
+   
+    <div class="container" class="col-sm-6">
+        <mat-card>
+       
+            <img src="../../../assets/images/student-logo.jpg" alt="student-logo" class="logo">
+     
+        <!-- page name -->
+        <h3>Register</h3>
+        <!-- registry form -->
+        
+            <form (ngSubmit)="formSubmit();" class="col-sm-6" class="text-center">
+                <div>
+                    <label for="username">Username:</label>
+                    <input type="text" 
+                    [(ngModel)]="user.username" name="username" placeholder="Enter username" required
+                        class="input-field">
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" [(ngModel)]="user.password" name="password" placeholder="Enter password"
+                        required class="input-field">
+                </div>
+                <div>
+                    <label for="firstname">Firstname:</label>
+                    <input type="text" [(ngModel)]="user.firstname" name="firstname" placeholder="Enter firstname"
+                        required class="input-field">
+                </div>
+                <div>
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" [(ngModel)]="user.lastname" name="lastname" placeholder="Enter lastname" required
+                        class="input-field">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" [(ngModel)]="user.email" name="email" placeholder="Enter email" required
+                        class="input-field">
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="number" [(ngModel)]="user.phone" name="phone" placeholder="Enter phone" required
+                        class="input-field">
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary mr20">Register</button>
+                   
+                    <button type="button" classs="btn btn-warning ml20">Cancel</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+
+</div>

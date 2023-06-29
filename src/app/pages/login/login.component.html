@@ -1,0 +1,44 @@
+<div class="bootstrap-wrapper">
+    <div class="container text-center">
+        <div class="row mt20 ">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="container text-center">
+                    <img src="../../../assets/images/student-logo.jpg" alt="_logo">
+                </div>
+
+                <h2 class="text-center"> Login Page</h2>
+                <mat-card class="text-center">
+                    <!-- Login form-->
+                    <form class="text-center" (ngSubmit)="formSubmit()">
+                        <p>
+                            <!-- username field -->
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Username</mat-label>
+                                <input required
+                                [(ngModel)]="logindata.username" name="username"
+                                matInput placeholder="Username" >
+                                <mat-hint>Enter your username</mat-hint>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <!--password -->
+                            <mat-form-field appearance="outline" class="full-width">
+                                <mat-label>Password</mat-label>
+                                <input required
+                                [(ngModel)]="logindata.password" name="password" 
+                                matInput placeholder="Password">
+                                <mat-hint>Enter your password</mat-hint>
+                            </mat-form-field>
+                        </p>
+
+                        <p>
+                            <button mat-raised-button color="primary" type="submit">Login</button>
+
+                            <button mat-raised-button color="accent" class="ml20" type="reset">Reset</button>
+                        </p>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

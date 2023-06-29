@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  <a routerLink="/">
+  <button mat-icon-button  aria-label="Example icon button with a menu icon">
+    <img class="menu-logo" src = "../../../assets/images/hamburger-menu-black.png">
+  </button>
+</a>
+    <a routerLink="/">
+      <span class="ml20">Exam Portal</span>
+  </a>
+      <span class="example-spacer"></span>
+      <a *ngIf="!isLoggedIn"
+      routerLink="/login">
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>login</mat-icon>
+      </button>
+      </a>
+      <a *ngIf="!isLoggedIn"
+      routerLink="/signup">
+      <button mat-icon-button class="example-icon mr20" aria-label="Example icon-button with share icon" >
+        <mat-icon>register</mat-icon>
+      </button>
+    </a>
+<!-- displaying current logged in full name -->
+    <a *ngIf="isLoggedIn" class="mr20" >
+      <button mat-icon-button class="example-icon mr20" aria-label="Example icon-button with share icon" >
+        <mat-icon>{{loginService.getUser().username}}</mat-icon>
+      </button>
+    </a> 
+
+    <!--displaying logout, if user is logged in-->
+    <a *ngIf="isLoggedIn" class="ml20 "
+       (click)="logout()">
+      <button mat-icon-button class="example-icon mr20" aria-label="Example icon-button with share icon" >
+        <mat-icon>Log Out</mat-icon>
+      </button>
+    </a>
+
+  
+</mat-toolbar>
